@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	
+	<style>
+		span{
+			color:blue;
+			font-size:16px;
+		}
+	</style>
+	
+	<link href="css/red.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+	<div>CSS 有三种表现方式：内联式，嵌入式，外部式。</div>
+	<div>内联式：&lt 标签名 style="属性:值">&lt/标签尾>。 style要写在开始标签里，可以用分号；添加多属性和值。</div>
+	<div>嵌入式：写在&lthead>里，格式如下。
+		<ul style="list-style:none">
+			<li>&ltstyle type="text/css"><br/>
+			&nbsp标签名{<br/>
+			&nbsp&nbsp属性1:值;<br/>
+			&nbsp&nbsp属性2:值;<br/>
+			&nbsp}<br/>
+			&lt/style></li>
+		</ul>
+	<div>外部式：单独建立一个.css后缀的文件，然后在html中通过link标签调用，link写在head内。调用方式如下。<br/>
+		<p>&lt;link href="CSS文件名位置" type="text/css" rel="stylesheet" > </p>
+		rel(relationship 联系 关系)属性指明文档与被链接文档的关系。 style(样式)sheet(表格)为样式表。	
+	</div>
+	<p>
+		优先级关系：就近原则。 CSS语句执行为顺序执行，内联式写在标签里，所以优先级最高；<br/>
+		嵌入式和外部式，写在head中，谁越在下面，谁就会被最终执行。<br/>
+		如果要强制提升为最高级，在对应属性的值后，写入"!inmportant"即可(不包括分号，包括感叹号)。
+	</p>
+	<p>
+		这里只谈论了对所有标签的统一控制，若要想对使用相同的标签的不同对象进行控制，需要加为标签class或id，再另述。
+	</p>
+	<h4 >
+		这是一个示例，这是单纯的<span>span标签 使用嵌入式设为蓝色</span>,<span style="color:red">内联式 红色</span><br/>
+		这是单纯的<span>标签 预使用外部设为<strong>绿色</strong>，link放在嵌入式之前</span><br/>
+		这是单纯的<span>标签 预使用外部设为<strong>红色</strong>，link放在嵌入式之后</span><br/>
+	</h4>
+		
+</body>
+</html>

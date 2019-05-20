@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>绝对位置(position:absolute)</title>
+	<style text="text/css">
+		
+	/*	基本布局*/
+		.a1{
+			width:200px;
+			height:200px;
+			margin-left:400px;
+			background:red;
+		}
+		.a2{
+			width:300px;
+			height:300px;
+			margin-left:400px;
+			background:green;
+		}
+		.a3{
+			width:400px;
+			height:400px;
+			margin-left:400px;
+			background:blue;
+		}
+		
+		/*演示和说明*/
+		.a2{
+			position:relative;
+		  /*定义元素位置属性为相对。使元素成为自己和子元素的参照物。不会像绝对位置，其下元素不会上来而堆叠*/
+			top:60px;
+			left:60px;
+		  /*上下左右的移动，以该元素默认位置为参照物，且移走对象后，原位置不会被其他元素占用*/
+			z-index:3;/*多元素移动和绝对一样会遇到上下级的问题，可通过z-index调整。*/
+		}
+		.a3{
+			position:relative;
+			top:40px;
+			left:40px;
+			z-index:2;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="a1"></div>
+	<div class="a2"></div>
+	<div class="a3"></div>
+</body>	
+</html>

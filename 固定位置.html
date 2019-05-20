@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>绝对位置(position:absolute)</title>
+	<style text="text/css">
+		
+	/*	基本布局*/
+		.a1{
+			width:2000px;
+			height:600px;
+			margin-left:400px;
+			background:red;
+		}
+		.a2{
+			width:300px;
+			height:300px;
+			background:green;
+		}
+		.a3{
+			width:600px;
+			height:400px;
+			margin-left:400px;
+			background:blue;
+		}
+		
+		/*演示和说明*/
+		.a2{
+			position:absolute; 
+		/*设置元素位置为固定。则该元素从流动中抽离，下面元素补齐而会形成堆叠。当页面滑动是，该元素保持不动。*/
+		/*中间元素设置，css下不跟数值时，元素不会自动左上对其，而是停留在设置时的位置*/
+			left:280px;
+			top:60px;
+		/*该位置相对参照物为浏览器窗口。*/
+		/*而absolute（绝对）的参照物是页面画布，当上下左右滑动时，absolute(绝对)和页面其他元素的相对位置不变，相对页面不变。
+			fixed（固定）相对其他元素位置变化，相对窗口不变*/
+		}
+	</style>
+</head>
+
+<body>
+	<div class="a1"></div>
+	<div class="a2"></div>
+	<div class="a3"></div>
+</body>	
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>盒模型</title>
+	<style>
+		p{ /*块元素*/
+			color:#CCC; /*对元素内容设定颜色*/
+			background:#666;/*对元素区域设定颜色*/
+		/*块元素，占一行的区域。*/
+			width:150px;
+			height:200px;
+		/*可以对块元素进行长宽设置*/
+		}
+		
+		a{ /*行元素*，内联元素*/
+			color:#eee;
+			background:#888;
+		/*行元素，内容区域即为元素区域。再接行元素，不会另起一行*/
+			width:150px;
+			height:200px;
+		/*长宽的设定对行元素不起作用*/
+		}
+		
+		img{ /*行块元素*，内联块状元素*/
+	
+		/*行块元素，内容区域即为元素区域。再接行元素，不会另起一行*/
+			
+			width:150px;
+			height:auto;
+		/*行块元素 可以进行长宽设定*/
+		}
+		
+		
+			/*以下为三者的相互转换*/
+		img,p{
+			display:inline; /*转换为行元素*/
+			background:red;
+			width:150px;
+			height:auto;
+/*转换后，可行元素完全一样，减小区域范围，不再占一行，且失去长宽控制*/
+			/*若行块元素转换为行，仍可调整长宽*/
+		}
+		img,a{
+			display:block;/*装换为块元素*/
+			background:blue;
+			width:150px;
+			height:auto;
+		}
+/*转换后，和块元素完全一样，占一行，可做长宽控制*/
+			/*若行块元素转换为块，占一行，可调大小*/
+
+		a,p{
+			display:inline-block;/*装换为行块元素*/
+			background:blue;
+			width:50px;
+			height:auto;
+/*转换后，像行元素一样不占整行，同时可做长宽控制*/	
+		}
+		
+	</style>
+	
+	
+</head>
+
+<body>
+	<p>上午主持召开十九届中央军民融合发展委员会</p>
+	<p>党的十九大强调要坚定实施军民融合发展战略</p>
+	<a href="#">上午主持召开十九届中央军民融合发展委员会</a>
+	<a href="#">党的十九大强调要坚定实施军民融合发展战略</a>
+	<img src="images/img_1.jpeg"/>
+	<img src="images/img_2.jpeg"/>
+	<img src="images/img_3.jpeg"/>
+</body>
+</html>

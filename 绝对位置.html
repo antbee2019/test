@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>绝对位置(position:absolute)</title>
+	<style text="text/css">
+		
+	/*	基本布局*/
+		.a1{
+			width:200px;
+			height:200px;
+			margin-left:400px;
+			background:red;
+		}
+		.a2{
+			width:300px;
+			height:300px;
+			margin-left:500px;
+			background:green;
+		}
+		.a3{
+			width:400px;
+			height:400px;
+			margin-left:600px;
+			background:blue;
+		}
+		
+		/*演示和说明*/
+		.a1{
+			position:absolute;
+			/*设置a1为绝对位置属性，即刻会把a1从流动中抽离。下面的图层会上来而形成重叠。*/
+			/*中间元素设置，css下不跟数值时，元素不会自动左上对其，而是停留在设置时的位置*/
+			top:60px;
+			left:60px;
+		/*	可设置上下左右参数，参照物是页面画布。不管它的父级是谁。它不会突破 margin padding的限定。 */
+			 z-index:0;
+		}
+		
+		.a2{
+			position:absolute;
+			left:60px; /*当不只一个元素设置 absolute 时，会出现多个层直接的上下级关系的问题，可通过 z-index调整*/
+			z-index:2; /*多对象层级关系可用z-index调整，数值范围0~9999,默认为0，数值越高越靠上。*/
+		}
+		.a3{
+			position:absolute;
+			left:60px; /*当不只一个元素设置 absolute 时，会出现多个层直接的上下级关系的问题，可通过 z-indent调整*/
+		}
+	</style>
+</head>
+
+<body>
+	<div class="a1"></div>
+	<div class="a2"></div>
+	<div class="a3"></div>
+</body>	
+</html>

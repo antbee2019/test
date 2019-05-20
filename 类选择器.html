@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style> 
+		ul{   /*标签选择器* 对使用同标签带有class的，优先class属性*/
+			list-style:none;
+		}
+		
+		#title{   /*使用id的类选择器*/
+			color:black;
+			font-weight:bold;
+			font-size:20px;
+		} 
+		.head{   
+			font-size:18px;
+		}
+		.dong{  /*使用class的类选择器*/
+			color:blue;
+		}
+		.tit li{  /*包含选择器 */ 
+			
+	/*这里tit不是li的 class，是指class为tit下的所有li都执行这一样式*/
+			
+			border:1px solid red;/*红色实线描边*/
+			width:100px;
+		}
+		.tit2>li{ /*子选择器 */ /*和包含选择器的区别是，子选择器只对第一层标签有效*/
+			color:blue;
+			font-weight:bold;
+			font-size:22px;
+		}
+		
+		.chun{  /*使用class的类选择器*/
+			color:green;
+		}
+		.xia{
+			color:#F1090D
+		}
+		.title,.qiu{
+			color:#EF9135
+		}
+		
+		
+	</style>
+</head>
+
+<body>
+	<div class="dong title"> 通过<span>class</span>或<span>id</span> 对标签命名，然后在CSS中通过名称进行<strong>统一</strong>设置样式。</div>
+	<div> class和id区别：class 可以多标签内使用，id只能用一次。调用方式，class使用“.”，id使用“#”。</div>
+	<div> class的使用更为广泛，同名可用在不同标签同时调用。同标签可有多个class名</div>
+<div>	
+	<ul class="tit">
+		<h1 id="title">四季</h1>
+		
+		<li class="head chun">春</li>
+		<li class="title">春天来了</li>
+		<li >
+			<ul>
+				<li>万物</li>
+				<li>复苏</li>
+			</ul>
+		</li>
+	</ul>	
+	
+	<ul class="tit2">
+		<li class="head xia">夏</li>
+		<li>夏天来了</li>
+		<li >
+			<ul>
+				<li>艳阳</li>
+				<li>高照</li>
+			</ul>
+		</li>
+	</ul>	
+	<ul>
+		<li class="head qiu">秋</li>
+		<li>秋天来了</li>
+		<li>树木凋零</li>
+	</ul>
+	<ul>
+		<li class="head dong">冬</li>
+		<li>冬天来了</li>
+		<li>银装素裹</li>
+	</ul>
+</div>	
+	
+</body>
+</html>

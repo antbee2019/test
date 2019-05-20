@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>站酷</title>
+<style type="text/css">
+	*{margin:0;padding:0;}
+	ul{list-style:none;}
+	a{text-decoration:none;}
+	img{vertical-align:middle;border:0;}
+	
+	.header{
+		height:70px;
+		background:#ffd100;
+	}
+	.w-1200{
+		width:1200px;
+		margin:0 auto;
+	}
+	.w-1200 .logo{
+		padding-top:14px;
+		width:360px;
+		float:left;
+	}
+	.w-1200 .center{
+		float:left;
+	}
+	.w-1200 li{
+		float:left;
+	}
+	
+	.w-1200 .center a{
+		display:inline-block;
+		width:64px;
+		background:#ffd100;
+		font-family:"Microsoft YaHei";
+		font-size:18px;
+		letter-spacing:2px;
+		text-align:center;
+		line-height:70px;
+		color:#333;
+	}
+	.w-1200 .right{
+		float:right;
+	}
+	.w-1200 .right a{
+		display:inline-block;
+		width:64px;
+		background:#ffd100;
+		text-align:center;
+		
+		line-height:70px;
+	}
+	.header a:hover{
+		background:#222;
+		color:#eee;
+		font-weight:bold;
+	}
+	
+	.banner img{
+		width:1200px;/*假装有banner图。。。*/
+		height:300px;
+		background:#ccc;
+		margin-top:20px;
+		border-radius:6px;
+	}
+	.list img{
+		width:224px;
+		border-radius:6px;
+	}
+	.list{
+		margin-top:20px;
+		overflow:hidden;/*溢出隐藏,当子元素设置浮动，不能在父元素中正常显示时，可以尝试在父元素中使用*/
+	}
+	.list li{
+		width:224px;
+		height:240px;
+		background:#ddd;
+		margin-right:20px;
+		margin-right:20px;
+		
+	}
+	.list li:last-child{ /*:last-child 伪类，最后一个元素。对应first-child为首个元素*/
+		margin-right:0px;
+	}
+	.list h2{
+		margin-top:10px;
+		font-family:"microsoft yahei";
+		font-size:14px;
+		font-weight:normal;
+		color:#333;
+	}
+	.list h2:hover{
+		text-decoration:underline;
+		color:red;
+	}
+	.list p{
+		font-family:"microsoft yahei";
+		font-size:12px;
+		color:#333;
+	}
+</style>
+	
+</head>
+
+<body>
+<!--网页头部-->
+	<div class="header"><!--头部底部-->
+	<div class="w-1200"><!--内容区，不显示，只做盒子-->
+		<div class="logo">
+			<a href="http://www.zcool.com.cn/" target="_blank">
+			<img  src="images/logo.jpg" />
+			</a>
+		</div>
+		<ul class="center">
+			<li ><a href="#">首页</a></li>
+			<li ><a href="#">发现</a></li>
+			<li ><a href="#">同城</a></li>
+			<li ><a href="#">职位</a></li>
+			<li ><a href="#">活动</a></li>
+			<li ><a href="#">素材</a></li>
+			<li ><a href="#">课程</a></li>
+			<li ><a href="#"><img src="images/more.png"></a></li>
+		</ul>
+		<ul class="right"><!--右侧列表-->
+			<li ><a href="#"><img src="images/more.png"></a></li>
+			<li ><a href="#"><img src="images/more.png"></a></li>
+			<li ><a href="#"><img src="images/more.png"></a></li>
+			<li ><a href="#"><img src="images/more.png"></a></li>
+		</ul>
+	</div>
+	</div>
+<!--banner-->
+	<div class="banner w-1200">
+		<a href="#"><img src="images/img_3.jpg"/></a>
+	</div>
+<!--list-->
+	<div class="w-1200">
+		<ul class="list">
+			<li><a href="#">
+				<img src="images/img_1.jpg"/>
+				<h2>三只猴子2017-2018年海报总结</h2>
+				</a>
+				<p>林嘉熙JACEN</p>
+			</li>
+			<li><a href="#">
+				<img src="images/img_2.jpg"/>
+				<h2>三只猴子2017-2018年海报总结</h2>
+				</a>
+				<p>林嘉熙JACEN</p>
+			</li>
+			<li><a href="#">
+				<img src="images/img_3.jpg"/>
+				<h2>三只猴子2017-2018年海报总结</h2>
+				</a>
+				<p>林嘉熙JACEN</p>
+			</li>
+			<li><a href="#">
+				<img src="images/img_4.jpg"/>
+				<h2>三只猴子2017-2018年海报总结</h2>
+				</a>
+				<p>林嘉熙JACEN</p>
+			</li>
+			<li><a href="#">
+				<img src="images/img_1.jpg"/>
+				<h2>三只猴子2017-2018年海报总结</h2>
+				</a>
+				<p>林嘉熙JACEN</p>
+			</li>
+		</ul>
+		<ul class="list">
+			<li><a href="#">
+				<img src="images/img_1.jpg"/>
+				<h2>三只猴子2017-2018年海报总结</h2>
+				</a>
+				<p>林嘉熙JACEN</p>
+			</li>
+			<li><a href="#">
+				<img src="images/img_2.jpg"/>
+				<h2>三只猴子2017-2018年海报总结</h2>
+				</a>
+				<p>林嘉熙JACEN</p>
+			</li>
+			<li><a href="#">
+				<img src="images/img_3.jpg"/>
+				<h2>三只猴子2017-2018年海报总结</h2>
+				</a>
+				<p>林嘉熙JACEN</p>
+			</li>
+			<li><a href="#">
+				<img src="images/img_4.jpg"/>
+				<h2>三只猴子2017-2018年海报总结</h2>
+				</a>
+				<p>林嘉熙JACEN</p>
+			</li>
+			<li><a href="#">
+				<img src="images/img_1.jpg"/>
+				<h2>三只猴子2017-2018年海报总结</h2>
+				</a>
+				<p>林嘉熙JACEN</p>
+			</li>
+		</ul>
+		<ul class="list">
+			<li><a href="#">
+				<img src="images/img_1.jpg"/>
+				<h2>三只猴子2017-2018年海报总结</h2>
+				</a>
+				<p>林嘉熙JACEN</p>
+			</li>
+			<li><a href="#">
+				<img src="images/img_2.jpg"/>
+				<h2>三只猴子2017-2018年海报总结</h2>
+				</a>
+				<p>林嘉熙JACEN</p>
+			</li>
+			<li><a href="#">
+				<img src="images/img_3.jpg"/>
+				<h2>三只猴子2017-2018年海报总结</h2>
+				</a>
+				<p>林嘉熙JACEN</p>
+			</li>
+			<li><a href="#">
+				<img src="images/img_4.jpg"/>
+				<h2>三只猴子2017-2018年海报总结</h2>
+				</a>
+				<p>林嘉熙JACEN</p>
+			</li>
+			<li><a href="#">
+				<img src="images/img_1.jpg"/>
+				<h2>三只猴子2017-2018年海报总结</h2>
+				</a>
+				<p>林嘉熙JACEN</p>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3_2D</title>
+	<style type="text/css">
+		
+		/*布局*/
+		.contact{
+			width:600px;
+			height:640px;
+			border:1px solid #000;
+			margin:40px;
+			background:#F7C942;
+		}
+		.a1,.a2,.a3,.a4,.a5,.a6{
+			width:100px;
+			height:100px;
+			background:rgba(0,0,255,0.3);
+			border:1px solid green;
+			margin-bottom:10px;
+		}
+	
+		/*演示*/
+		.a1,.a2,.a5,.a6{
+			display:inline-block;
+		}
+		.a1:hover{
+			transform:translate(60px,70px);
+			/*translate，移动。一个数值时默认为只移动x方向移动。
+			x向右为正值，向左为负值。y向下为正值，向上为负值。参照物是自身。
+			移动后本身的位置不会被占。也不会挤压到别人，而是形成堆叠。*/
+		}
+		.a2{
+			height:140px;
+			margin-top:10px;
+			margin-bottom:10px;
+			padding:6px;
+		}
+		.a2:hover{
+			height:140px;
+			transform:rotatez(60deg);
+			/*rotate 旋转。顺时针旋转为正值，逆时针旋转为负值，旋转中心点为物体中心点。物体旋转会突破原margin的限制，会保留padding的限制。*/
+		}
+		.a2:hover{
+			height:140px;
+			transform:rotatez(60deg);
+			transform-origin:0% 10%;
+			/*通过transform-orign可以为元素设置中心点，不使用该属性时，默认（50% 50%）即物体中心。
+			%相对元素自身长宽，左上角为(0,0)，x向右为正，向左为负；y向下为正，向上为负。除了数值，还可以用center bottom等定位。*/
+		}
+		.a3:hover{
+			transform:scale(-2,0.4);
+			/*scale 拉伸。一个数值时，xy同时拉伸相应比例。
+			两数值时，左边为x方向即只左右的宽拉伸，右边为y方向上下高拉伸。拉伸以物体中心为中心，不接受具体带单位的长度，数值在0~1之间时为缩小。数值为负数时造成翻转的效果。（-1，1）左右翻转；（1，-1）上下翻转。*/
+		}
+		.a4:hover{
+			transform:skew(20deg,10deg)
+			/*skew  斜切。一个值时，默认为x值。两个值时，第一个值为高度不变，x方向位移与y轴的夹角度数，上向右为正值，向左为负值。
+			第二个值为宽度不变，y方向位移与x轴的夹角度数。物体中心保持不变。数值范围要在0~90之间，不包含90。右向下为正值，向上为负值。*/
+		}
+		/*过渡*/
+	 	.a5:hover{
+			transform:translate(100px) rotate(360deg) scale(1.2);
+			transition:transform 3s ease 1s;
+		/*同一标签不能写多个transform，否则会覆盖。故用组合的方式。
+		transition为过渡，第一个参数为过去的元素，不只可用transform。后面是过渡经过的时间，后面为过渡的开始的时间，即延迟。
+		默认渐变方式为ease先快后慢，其他还有ease-in越来越快，ease-out越来越慢 ease-in-out先加速后减速，linear匀速。
+		为了使transition不会在触发结束后突然消失而显得生硬，通常把transiton放在标签里，而不放在伪类里。*/
+		}
+		
+		.a6{
+			transform:translate(20px);
+		}
+		.a6:hover{
+			transform:translate(0px); 
+			/*这里数值是0，单实际将鼠标放a6上，元素回到了原来位置。可见 transform表述的是个相对原位的静止状态，而非动作。*/ 
+		}
+	</style>	
+</head>
+
+<body>
+<div class="contact">
+<div class="a1">translate调动</div>
+<div class="a2">rotate旋转</div>
+<div class="a5">移动旋转组合</div>
+<div class="a6">位移判定</div>
+<hr/>
+<div class="a2">rotate旋转</div>
+<hr/>
+<div class="a3">scale缩放</div>
+<hr/>
+<div class="a4">skew斜切</div>
+<hr/>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>盒模型</title>
+	<style>
+		
+		*{
+			margin:0px; /*网页元素默认有外边距，这里清除外边距*/
+			padding:0px;/*清除内边距*/
+		}
+		body{
+			background:#888;
+		}
+		.a1,.a2{
+			float:left;
+		}
+		.a1{
+			width:200px;
+			height:260px;
+			background:#ddd;
+			
+			border:3px solid red; /* 描边：3px 实线 红色*/
+			border:3px dashed blue; /* 描边：3px 虚线 蓝色*/
+			border:3px dotted green; /* 描边：3px 点线 绿色*/
+			/*描边会撑大盒子*/
+			
+			padding-left:24px; /* 左-内边距：24px，内容边界到元素边界的距离。
+			这里会把盒子撑大，相当于内容向右平移24px，边界随之扩大。
+			要消除这种效果，需要再在内建一个标签，控制子元素的内边距，
+			这样子元素不会逃出父元素的盒子，到边界自动收缩。
+			但也不太超过，否则内容会跑到盒外。*/
+			
+			padding-right:60px; /* 右-内边距：60px，上面一样会撑大元素边界*/
+			padding-top:60px; /* 上-内边距：60px，上面一样会撑大元素边界*/
+			
+			margin:0px 50%; /*居中。设置外边距，相对网页，自上向下0px，自左到右位置50%*/
+			
+			margin-left:100px;/* 左-外边距：100px，元素边界到浏览器边界的距离*/
+			margin-right:0px;/* 右-外边距：220px，元素边界到浏览器边界的距离*/
+  
+			
+		}
+		.a2{
+			width:200px;
+			height:260px;
+			background:#bbb;
+			border:3px solid red; /* 描边：3px 实线 红色*/
+		}
+		
+	</style>
+	
+	
+	
+</head>
+
+<body>
+<div class="a1">
+  <p>构建一体化的国家战略体系和能力。我们要深入贯彻党的十九大精神，增强使命感和责任感，真抓实干，紧抓快干，不断开创新时代军民融合深度发展新局面。</p>
+</div>
+<div class="a2">
+  我是a2
+</div>
+</body>
+</html>

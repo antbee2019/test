@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		*{
+			margin:0;/*所有表情外边距和内边距为0*/
+			padding:0;
+		}
+		a{
+			text-decoration:none; /*链接标签不做修饰*/
+		}
+		body{
+			font-family:"microsoft yahei";
+			font-size:14px;
+			background:#ccc;
+			background:url(images/img_3.jpeg);/*背景图片，平铺*/
+			
+			*background-attachment:fixed;/*固定背景图片*/
+			/*attachment:“附着”，该属性默认为“scroll”，背景图随滑动条滚动*/
+			background-size:cover;/*图片充满整个页面，不拉伸*/
+		}
+		li{
+			list-style:none;/*去除列表的小黑点*/
+		}
+		img{
+			border:0; /*带链接的图片，有些浏览器可能会添加描边*/
+			vertical-align:middle; /*行内元素垂直居中*/
+		}
+		.box-1{
+			width:960px;
+			height:330px;
+			background:rgba(51,51,51,0.87); /*设置颜色和不透明度*/
+			border:3px solid red;
+			margin:0 auto; /*设置水平居中*/	
+		}
+		
+		h1{
+			background:#ddd;
+			text-align:center; /*文本居中*/
+		}
+		.p1{
+			text-align:center;/*图片也可使用文本对齐的属性*/
+		}
+		.box-2{
+			width:160px;
+			height:100px;
+			background:#ccc;
+			border:2px solid blue;
+			margin-left:10px;
+			margin:10px 0px 0px 20px;/*综合写法，依次是 上、右、下、左 */
+			padding:50px 0px 0px 0px;
+		}
+		.box-3{
+			width:160px;
+			height:120px;
+			background:#ccc;
+			border:2px solid green;
+			margin:10px 0px 0px 20px;
+		}
+		
+	</style>
+</head>
+
+<body>
+    <div class="box-1">
+		<h1>CSS布局模型</h1>
+		<p class="p1"><img src="images/img_2.jpg"/></p>
+	</div>
+	<div class="box-1">
+		<p class="box-2"></p>
+		<p class="box-3"></p>
+		<p ><a href="#"><img src="images\serch.jpg" />搜索</a></p>
+	</div>
+</body>
+</html>

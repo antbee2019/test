@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		.test strong{  /*包含选择器。 .test这个标签下的所有strong均采用此样式*/
+			color:red;
+		}
+		.test_2 >strong{ /*子选择器。 .test_2这个标签下的第一层strong均采用此样式，对被裹在其他标签下的strong不起作用*/
+			color:red;
+		}
+	</style>
+</head>
+	
+
+<body>
+	<div class="test">
+    这是一部<strong>美国</strong><em><strong>好看</strong>又<strong>感人</strong></em>的<strong>剧情片</strong>。	
+	</div>
+	<hr/>
+	<div class="test_2">
+    这是<strong>美国</strong>一部<em><strong>好看</strong>又<strong>感人</strong></em>的<strong>剧情片</strong>。	
+	</div>
+</body>
+</html>

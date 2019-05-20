@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>form</title>
+<style>
+	li{
+		line-height:24px;
+	}
+		img{
+		width:80px;
+	}
+</style>
+</head>
+
+<body>
+    <p><strong>form是表单标签。用来裹整个表单，包括按钮，按钮操作对应整个表单。</strong><br/>
+     cation参数指明表单提交时数据发送给谁，可接对应的HTML地址。method参数指明传输方式，有get和post两种。
+	<p><strong>input为输入标签。单标签</strong><br/>
+		type参数为类型，有text文本、password密码(字符显示为小点)，radio单选(radio译为收音机，老收音机按下一个键其他会弹出来)<br/>
+	&nbsp&nbsp&nbsp radio为单选属性，后用value指明该选项的“值”不显示，name指明组名，只在同name间单选。后加checked则默认选中该项。<br/>
+    &nbsp&nbsp&nbsp submit为按钮属性，后用value指明按钮名称，其将在按钮上显示此名。 reset表示重置，<br/>
+		name参数为输入框名称，不显示。placeholder(占位符)参数为输入框默认(提示)内容，默认显示，输入时消失。</p>
+	<p><strong>select标签,</strong>用来裹下拉单项选择框。加入multiple参数，则为展开式复选框。<br/>
+		<strong>option标签</strong>裹住选项。opetion标签参数value指明该选项的“值”不显示，需默认显示则在该项使用selected。<br/>
+		<strong>texrarea标签</strong>用来定义多行文本输入区。参数cols为列数，即左右宽度；rows为行数，即上下宽度。placeholder提示。<br/>
+		<strong>label标签，</strong>通过input内定义的id，使元素和选择的那个点进行关联，点击label裹住的内容，即相当于选中该项。<br/>
+	</p>
+	<form action="table.html" method="post" >
+		<ul style="list-style:none"><!--使用ul是为了达到列表的格式效果-->
+			<li>用户：<input type="text" placeholder="请输入用户名" name="username"/></li>
+			<li>密码：<input type="password" placeholder="请输入用户名" name="username"/></li>
+			<li>
+				性别：<input type="radio" value="男" name="gender" checked />男
+					 <input type="radio" value="女" name="gender"/>女
+					 <input type="radio" value="保密" name="gender"/>保密
+			</li>
+			<li>选择头像：<br/>
+					 <input type="radio" value="pic_1" name="gender" id="pic_1" checked />
+					 <label for="pic_1"><img src="images/img_1.jpeg"/>
+				 	 <input type="radio" value="pic_2" name="gender" id="pic_2" checked />
+					 <label for="pic_2"><img src="images/img_2.jpeg"/>
+				 	 <input type="radio" value="pic_3" name="gender" id="pic_3" checked />
+					 <label for="pic_3"><img src="images/img_3.jpeg"/>
+			</li>
+			<li>
+				爱好：<input type="checkbox" value="吃" name="interest" checked />吃饭
+					 <input type="checkbox" value="睡" name="interest"/>睡觉
+					 <input type="checkbox" value="打" name="interest"/>打豆豆
+			</li>
+			<li>
+				出生日期：
+				<select >
+					<option  value="1991" name="age" >1985</option>
+					<option  value="1997" name="age" selected>1991</option>
+					<option  value="2000" name="age">2000</option>
+				</select> 年
+				<select>
+					<option value="1" selected >1</option>
+					<option value="2" >2</option>
+					<option value="3" >3</option>
+				</select> 月
+				<select>
+					<option value="07"  >07</option>
+					<option value="16"  >16</option>
+					<option value="21"  selected>21</option>
+				</select> 日
+			</li>
+			<li>
+				你喜欢的类型（可多选）：<br/>
+				<select multiple >
+					<option style="width:130px" value="1991"  >扁平化</option>
+					<option  value="1997"  selected>拟物化</option>
+					<option  value="2000" >蒸汽朋克</option>
+					<option  value="2000" >简笔清新</option>
+				</select> 
+			</li>
+			<li>
+				留言：<br/>
+					<textarea cols="40" rows="6" placeholder="请在此留言..." ></textarea>
+			</li>
+			<li>
+				<input type="submit" value="留言"/><!--提交按钮-->
+				<input type="reset" value="清除信息"/><!--重置按钮-->
+			</li>
+		</ul>
+	</form>	
+</body>
+</html>

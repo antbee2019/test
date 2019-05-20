@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style type="text/css">
+		.imgesl li{
+			list-style:none;
+			float:left;
+}
+	</style>
+</head>
+	
+<body>
+	
+	<h3>img是插入图片的标，它有src alt title weigh height等参数可以设置。</h3>
+    <h4>src后是图片位置，alt后是失败后内容，title后是鼠标悬浮上的提示，width为宽，height为高。<br/>
+		src是必有，其他以需求取舍。宽高只设置一个时，此设置固定，原图等比缩放，当设置两个时，图片会被拉伸。</h4>
+	<p>格式：&ltimg src="文件路径" alt="失败后替换对象" title="图片标题" width="高度" height="高度" /&gt</p>
+	<h5>只显示图片,并限制大小</h5>
+	<img src="images/img_1.jpeg" width="150" />
+	<img src="images/img_1.jpeg" width="130" />
+	<img src="images/img_1.jpeg" width="130" height="80" />
+	<img src="images/img_11.jpeg" alt="失败替换对象" width="130" />
+	<img src="images/img_1.jpeg" alt="失败替换对象" title="图片宽度为130" width="130" />最后一张悬浮查看提示。
+	<h5>上面图片是通过直接排列方式。</h5>
+	<h3>下面通过对ul的CSS样式。使用float进行横向排列。练习插入图片列表。</h3>	
+	<p>
+	<ul class="imgesl">
+		<li><img src="images/img_1.jpeg" width="130" /> </li>
+		<li><img src="images/img_2.jpeg" width="130" /> </li>
+		<li><img src="images/img_3.jpeg" width="130" /> </li>
+		<li><img src="images/img_4.jpeg" width="130" /> </li>
+	</ul>
+	</p>
+</body>
+</html>

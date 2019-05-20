@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		table{
+			border:3px solid #777; /*设置表格外框为3px 实线 颜色#777 */
+		}
+		th{
+			border:1px solid #777; /*设置标题单元格框为3px 实线 颜色#777 */
+			background:#eee;/*设置单元格背景颜色#eee */
+		}
+		td{
+			border:1px solid #777; /*设置数据单元格框为3px 实线 颜色#777 */
+		}
+
+	</style>
+</head>
+
+<body>
+	<h3>table是用来表示表格属性的标签。一个完整的表格包含：表格名称，表格说明（summary），单元格，和表格结构。</h3>
+	<h4>table裹整个表格，tr裹一行，通过tr控制行数，th裹分类性质的标题，td裹数据类型的内容，通过th或td（不是每个表格都有th）控制列数。<br/>
+		summary作为table的参数对表格进行说明。caption作为标签显示出表格总名称。</h4>
+	<h3>不规则表格，是对单元格（th或td）设置跨度的数值来实现的。<br/>rowspan参数表示上下跨度，colspan表示左右跨度。可同时使用</h3>
+	
+	<table summary="这是表格的说明，不会在页面显示，为提高代码可读性存在">
+		<caption>这是标准表格</caption>
+		<tr>
+			<th>列表1</th>
+			<th>列表2</th>
+			<th>列表3</th>
+			<th>列表4</th>
+		</tr>
+		<tr>		
+			<td>1-1</td>
+			<td>1-2</td>
+			<td>1-3</td>
+			<td>1-4</td>
+		</tr>
+		<tr>		
+			<td>2-1</td>
+			<td>2-2</td>
+			<td>2-3</td>
+			<td>2-4</td>
+		</tr>
+		<tr>		
+			<td>3-1</td>
+			<td>3-2</td>
+			<td>3-3</td>
+			<td>3-4</td>
+		</tr>		
+	</table>
+	<p></p>
+		<table summary="这是表格的说明，不会在页面显示，为提高代码可读性存在">
+		<caption>这是不规则的表格</caption>
+		<tr>
+			<th>列表1</th>
+			<th>列表2</th>
+			<th>列表3</th>
+			<th>列表4</th>
+		</tr>
+		<tr>		
+			<td>1-1</td>
+			<td rowspan="2">rowspan<br/>上下跨度2</td>
+			<td>1-3</td>
+			<td>1-4</td>
+		</tr>
+		<tr>		
+			<td>2-1</td>
+			<td rowspan="2" colspan="2">rowspan上下2<br/>colspan左右2<br/>同时使用</td>
+
+		</tr>
+		<tr>		
+			<td>3-1</td>
+			<td>3-2</td>
+		</tr>		
+	</table>
+	
+</body>
+</html>

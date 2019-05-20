@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>csss3动画@keyframes</title>
+<style>
+	.test1,.test2,.test3,.test4,.test5{
+		width:100px;
+		height:100px;
+		background:#333;
+		margin:20px;
+	}
+	
+	.test1{
+		animation:a1 5s; /*使用animation指明使用什么名称的keyframes动画，动画持续几秒，延迟多久播放。*/
+		animation-fill-mode:backwards; /*设置对象状态为动画开始时的状态，如果结束状态和起始不一致，会回到起始状态，这个变化是突变的，没有过渡*/
+	}
+	.test2{
+		animation:a2 10s; /*使用animation指明使用什么名称的keyframes动画，动画持续几秒，延迟多久播放。*/
+		animation-fill-mode :forwards; /*设置对象状态为动画结束时的状态，*/
+	}
+	.test3{
+		animation:a3 10s; /*使用animation指明使用什么名称的keyframes动画，动画持续几秒，延迟多久播放。*/
+		animation-fill-mode :forwards; /*当不存在100%或to状态时，会回到起始。*/
+	}
+	.test4{
+		animation:a4 10s; /*使用animation指明使用什么名称的keyframes动画，动画持续几秒，延迟多久播放。*/
+		animation-fill-mode :forwards; /*当不存在100%或to状态时，会回到起始。*/
+	}
+	.test5{
+		animation:a2 12s; /*使用animation指明使用什么名称的keyframes动画，动画持续几秒，延迟多久播放。*/
+		animation-fill-mode :forwards; /*当不存在100%或to状态时，会回到起始。*/
+	}
+	.test5:hover{
+		animation-play-state :paused; /*当鼠标悬停时，设置播放状态为暂停，鼠标离开，继续播放。暂停时间不会计入过渡时间内*/
+	}
+	
+	@keyframes a1{ /*使用@keyframes进行自定义动画，并命名。即使名称与已使用的类名一样，也不会在该类中直接产生效果，需要animation链接*/
+		from{a3background:#333;}
+		to{background:green;transform:scale(1.2,1.2) translate(200px,0);}
+	}
+	@keyframes a3{ /*在不设置100%时，默认100%为初始状态，会从最后以个百分比状态过渡回起始状态*/
+		0%{background:#333;}
+		50%{background:green;transform:scale(1.2,1.2) translate(200px,0);}
+	}
+	@keyframes a2{ /*可以使用百分数进行更详细的步骤。前例from相当于0%，to相当于100%*/
+		0%{background:#333;}
+		50%{background:green;transform:scale(1.2,1.2) translate(200px,0);}
+		100%{background:red;} /*根据的演示结果看，最终元素回到了最初的状态，即整个过程是以元素本来的状态为基准*/
+	}
+	@keyframes a4{ /*从非默认态回到默认*/
+		from{background:red;transform:scale(1.2,1.2) translate(200px,0);}
+	}
+</style>
+	
+</head>
+
+<body>
+	<div class="test1"></div>
+	<div class="test2"></div>
+	<div class="test3"></div>
+	<div class="test4"></div>
+	<div class="test5"></div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>布局_浮动</title>
+	<style type="text/css">
+		/*样式初始化*/
+	*{
+		margin:0;/*所有标签的外边距和内边距为零*/
+		padding:0;
+	}
+	a{
+		text-decoration:none;/*所有链接没有下划线*/
+	}
+	body{
+		font-family:"Microsoft Yahei";
+		font-size:14px;
+		background:url(images/bg1.png);
+	/*	background:#ccc;*/
+	background-attachment:fixed;/*固定背景*/
+	}
+	li{
+		list-style:none;/*去掉小黑点*/
+	}
+	img{
+		border:0;
+		vertical-align:middle;/*图片的对齐方式*/
+	}
+		.wrap{
+			width:1000px;
+			height:1000px;
+			border:2px solid #000;
+			background:#fff;
+			margin:0 auto;
+		}
+		
+		.w-250{
+			width:250px;
+			height:200px;
+		}
+		.box-1{
+			background:red;
+		}
+		.box-2{
+			background:orange;
+		}
+		.box-3{
+			background:green;
+		}
+		.box-4{
+			background:blue;
+		}
+		.f-left{
+			float:left; /*设置float为向左浮动。即使是块元素，浮动后也默认按行排列*/
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+  		<div class="box-1 w-250 f-left"></div>
+ 		<div class="box-2 w-250 f-left"></div>
+ 		<div class="box-3 w-250 f-left"></div>
+ 		<div class="box-4 w-250 f-left"></div>
+	</div>	
+</body>
+</html>
